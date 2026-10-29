@@ -10,7 +10,7 @@ Noise modelling includes unrelated large-scale structure, intrinsic galaxy ellip
 
 The filter requires an analytical power spectrum, calculated using CCL and CAMB with the weighted HSC source-redshift distribution. The template is mirrored to reduce boundary effects, Fourier transformed, divided by the total noise power, and transformed back into real space.
 
-The application of the filter follows a geometrical procedure where the filter is rotated around the halo to produce tangential and cross-component signal curves. An ensemble of 1,000 noise realizations estimates uncertainties and angular covariance, allowing signal-to-noise ratios to be calculated. A separate single observation combines the snapshot signal with large-scale structure and shape noise.
+The application of the filter follows a geometrical procedure where the filter is rotated around the halo to produce tangential and cross-component signal curves. An ensemble of 1,000 noise realizations estimates uncertainties and angular covariance, allowing signal-to-noise ratios to be calculated. A separate single observation combines the snapshot signal with large-scale structure and shape noise. A circular cut in the inner region of the field is applied to avoid contamination from the halo's shear signal.
 
 Finally, emcee samples the filament amplitude and width parameters along the strongest positive detected angular direction. The script saves numerical results, diagnostic plots, posterior distributions, and checkpoints.
 
