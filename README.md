@@ -1,10 +1,10 @@
 # Weak-Lensing-Matched-Filter-for-Intracluster-Filaments
 
-This Python script implements a weak-lensing matched filter to identify intracluster filaments in simulated observations. It combines IllustrisTNG snapshots, κTNG lensing maps, and galaxy catalogue information from the Hyper Suprime-Cam Subaru Strategic Program (HSC) to test filament detection under realistic observing conditions.
+This Python script implements a weak-lensing matched filter to identify intracluster filaments in simuations' snapshots. It combines IllustrisTNG snapshots, κTNG lensing maps, and galaxy catalogue information from the Hyper Suprime-Cam Subaru Strategic Program (HSC) to test filament detection under realistic observational conditions.
 
 The program selects a halo from an IllustrisTNG100 snapshot and project dark matter particles onto a two-dimensional surface-density grid. This distribution is converted into convergence maps for different source redshifts. Via Fast Fourier transformation it derives the two shear components. The result is the lensing signal of the halo and its surrounding structure.
 
-The workflow expects an HSC catalogue as an input to supply galaxy positions, source redshifts, and shape-measurement uncertainties. Quality cuts are introduced to reproduce a clean field of view, such procedure includes the selection of non-overlapping sky windows with adequate coverage. The creation of a 1000 uncorrelated line of sights requires resampling the patterns through rotations and reflections. Background galaxies contribute to the measurement.
+The workflow expects an HSC catalogue as an input to supply galaxy positions, source redshifts, and shape-measurement uncertainties. Quality cuts are introduced to reproduce a clean field of view, such procedure includes the selection of non-overlapping sky windows with adequate coverage. The creation of 1000 uncorrelated line of sights requires resampling the patterns through rotations and reflections. Background galaxies contribute to the measurement.
 
 Noise modelling includes unrelated large-scale structure, intrinsic galaxy ellipticities, and measurement errors. Dark-matter-only κTNG convergence and shear maps supply the line-of-sight lensing contribution at the assigned redshift source planes. Each mock source inherits its HSC lensing weight and measurement uncertainty, while an independent intrinsic ellipticity is randomly drawn. 
 
