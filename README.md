@@ -1,0 +1,2 @@
+# Weak-Lensing-Matched-Filter-for-Intracluster-Filaments
+Python pipeline for weak-lensing detection of intracluster filaments using IllustrisTNG snapshots, κTNG convergence maps, and HSC galaxy sampling. Builds a matched filter with Fourier transforms, models large-scale structure and shape noise, estimates detection significance through Monte Carlo simulations, and fits filament properties with emcee.
